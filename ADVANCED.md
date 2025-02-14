@@ -7,6 +7,7 @@
 
 At the core of the framework, is a data processing library, that provides a systematic way to implement the data processing modules. The library is python-based and enables the application of "transforms" to a one or more input data files to produce one or more output data files. We use the popular [parquet](https://arrow.apache.org/docs/python/parquet.html) format to store the data (code or language). 
 Every parquet file follows a set [schema](transforms/code/code2parquet/python/README.md). A user can use one or more transforms (or modules) as discussed above to process their data. 
+
 A transform can follow one of the two patterns: annotator or filter.
 
 - **Annotator** An annotator transform adds information during the processing by adding one more columns to the parquet files.
@@ -25,6 +26,7 @@ Additionally, check out our [video tutorial](https://www.youtube.com/watch?v=0WU
 
 
 ## 💻 -> 🖥️☁️ From laptop to cluster <a name = "laptop_cluster"></a>
+
 Data-prep-kit provides the flexibility to transition your projects from proof-of-concept (PoC) stage to full-scale production mode, offering all the necessary tools to run your data transformations at high volume. In this section, we enable you how to run your transforms at scale and how to automate them. 
 
 ### Scaling of Transforms
@@ -46,6 +48,7 @@ to interact with the KubeRay operator. An additional [framework](kfp/kfp_support
 [kfp components](kfp/kfp_ray_components) is used to simplify the pipeline implementation.
 
 A simple transform pipeline [tutorial](kfp/doc/simple_transform_pipeline.md) explains the pipeline creation and execution. 
+
 In addition, if you want to combine several transformers in a single pipeline, you can look at [multi-steps pipeline](kfp/doc/multi_transform_pipeline.md) 
 
 When you finish working with the cluster, and want to clean up or destroy it. See the 
